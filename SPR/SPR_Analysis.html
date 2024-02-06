@@ -7913,6 +7913,7 @@ $$\cos\theta_3 = \left(1-n**2\sin**2\theta_1\right)**{1/2}$$</p>
 <span class="sd">    Wrapper for reflectance function to pass to</span>
 <span class="sd">    LMfit Model class.</span>
 <span class="sd">    '''</span>
+    <span class="c1"># Removed conversion of degrees to radians here since it will be done below</span>
     <span class="k">return</span> <span class="n">I</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="nb">complex</span><span class="p">(</span><span class="n">eps_re</span><span class="p">,</span><span class="n">eps_im</span><span class="p">),</span> <span class="n">d</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">,</span> <span class="n">wavenum</span><span class="o">=</span><span class="n">wavenum</span><span class="p">)</span>
 
 <span class="c1">## Key statement to pull Model class in.</span>
@@ -7946,7 +7947,7 @@ $$\cos\theta_3 = \left(1-n**2\sin**2\theta_1\right)**{1/2}$$</p>
 <span class="n">red_params</span><span class="p">[</span><span class="s1">'eps_im'</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.476</span>
 <span class="n">red_params</span><span class="p">[</span><span class="s1">'d'</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">60.88</span>
 <span class="n">red_params</span><span class="p">[</span><span class="s1">'I'</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="c1"># Intensity correction?</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">red_x_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">red_x_data</span><span class="p">)</span> <span class="c1"># Checking angles in radians</span>
 </pre></div>
 </div>
 </div>
